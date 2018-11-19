@@ -41,7 +41,7 @@ goto menu
 if exist C:\Program Files\Microsoft Office\Office16\ospp.vbs (
     cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /sethst:vectordigi.tk
     cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /act
+    echo All done, enjoy!!
 ) else ( echo Office is not installed correctly )
-echo All done, enjoy!!
 pause
 goto menu
