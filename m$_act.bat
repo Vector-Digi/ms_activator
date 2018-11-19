@@ -32,14 +32,14 @@ if %sle%==3 goto end
 else goto menu
 :win10
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-slmgr /skms vectordigi.tk
+slmgr /skms service.vectordigi.tk
 slmgr /ato
 echo All done, enjoy!!
 pause
 goto menu
 :office16
 if exist C:\Program Files\Microsoft Office\Office16\ospp.vbs (
-    cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /sethst:vectordigi.tk
+    cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /sethst:service.vectordigi.tk
     cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /act
     echo All done, enjoy!!
 ) else ( echo Office is not installed correctly )
