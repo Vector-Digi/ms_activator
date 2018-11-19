@@ -39,8 +39,9 @@ pause
 goto menu
 :office16
 if exist C:\Program Files\Microsoft Office\Office16\ospp.vbs (
-    cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /sethst:service.vectordigi.tk
-    cscript C:\Program Files\Microsoft Office\Office16\ospp.vbs /act
+    cd C:\Program Files\Microsoft Office\Office16\
+    cscript ospp.vbs /sethst:service.vectordigi.tk
+    cscript ospp.vbs /act
     echo All done, enjoy!!
 ) else ( echo Office is not installed correctly )
 pause
