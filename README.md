@@ -1,2 +1,9 @@
-# m$_activator
-Verify your MS products through our KMS server
+随处可见的KMS激活脚本，可以激活微软全家桶，但没必要。
+
+## 使用说明
+* 授予管理员权限
+* 选择你要激活的产品
+* 坐和放宽
+
+## 借来的东西
+[vlmcsd](https://github.com/Wind4/vlmcsd)
