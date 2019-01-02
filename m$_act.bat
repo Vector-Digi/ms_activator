@@ -22,13 +22,15 @@ cls
 ::: =========================================================
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo 1.Windows 10 Pro
-echo 2.MS Office 2016
-echo 3.Quit
+echo 2.Windows Server 2016 Standard
+echo 3.MS Office 2016
+echo 4.Quit
 echo.
 set /p sle=Select to activate:
 if %sle%==1 goto win10
-if %sle%==2 goto office16
-if %sle%==3 goto end
+if %sle%==2 goto winserver
+if %sle%==3 goto office16
+if %sle%==4 goto end
 else goto menu
 :win10
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
@@ -37,6 +39,11 @@ slmgr /ato
 echo All done, enjoy!!
 pause
 goto menu
+:winserver
+slmgr /ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
+slmgr /skms service.vectordigi.tk
+slmgr /ato
+echo All done, enjoy!!
 :office16
 if exist C:\Program Files\Microsoft Office\Office16\ospp.vbs (
     cd C:\Program Files\Microsoft Office\Office16\
