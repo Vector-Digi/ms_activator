@@ -22,13 +22,13 @@ cls
 ::: =========================================================
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo 1.Windows 10 Pro
-echo 2.Windows Server 2016 Standard
+echo 2.Windows Server 2019 Datacenter
 echo 3.MS Office 2016
 echo 4.Quit
 echo.
 set /p sle=Select to activate:
 if %sle%==1 goto win10
-if %sle%==2 goto winserver
+if %sle%==2 goto winserver2019
 if %sle%==3 goto office16
 if %sle%==4 goto end
 else goto menu
@@ -39,8 +39,8 @@ slmgr /ato
 echo All done, enjoy!!
 pause
 goto menu
-:winserver
-slmgr /ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
+:winserver2019
+slmgr /ipk WMDGN-G9PQG-XVVXX-R3X43-63DFG
 slmgr /skms service.vectordigi.tk
 slmgr /ato
 echo All done, enjoy!!
