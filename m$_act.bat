@@ -20,6 +20,7 @@ cls
 ::: |_|  |_(   / /_/   \_\___|\__|_| \_/ \__,_|\__\___/|_|
 :::         |_|                       Powered by Vector Di-gi
 ::: =========================================================
+set /p kms_server=Set KMS Server:
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo 1.Windows 10 Pro
 echo 2.Windows Server 2019 Datacenter
@@ -34,20 +35,20 @@ if %sle%==4 goto end
 else goto menu
 :win10
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-slmgr /skms service.vectordigi.tk
+slmgr /skms %kms_server%
 slmgr /ato
 echo All done, enjoy!!
 pause
 goto menu
 :winserver2019
 slmgr /ipk WMDGN-G9PQG-XVVXX-R3X43-63DFG
-slmgr /skms service.vectordigi.tk
+slmgr /skms  %kms_server%
 slmgr /ato
 echo All done, enjoy!!
 :office16
 if exist C:\Program Files\Microsoft Office\Office16\ospp.vbs (
     cd C:\Program Files\Microsoft Office\Office16\
-    cscript ospp.vbs /sethst:service.vectordigi.tk
+    cscript ospp.vbs /sethst: %kms_server%
     cscript ospp.vbs /act
     echo All done, enjoy!!
 ) else ( echo Office is not installed correctly )
